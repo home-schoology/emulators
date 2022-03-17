@@ -13,8 +13,6 @@
             
             function swfcheck() {
                 if (console.log(urlParams.has('swf'))) {
-            const swfsearch = urlParams.get('swf')
-            console.log(swfsearch);
 } else {
  alert("swf file not specified");
 }
@@ -29,9 +27,10 @@ swfobject.embedSWF = function(url, cont, width, height){
             style: 'width: ' + width + 'px; height: ' + height + 'px',
         });
     
-    player.load({ url: url });
+    player.load({ url: url});
 }
-swfobject.embedSWF('swf', 'ruffle', 500, 500);
+swfobject.embedSWF(const search = urlParams.get('swf')
+console.log(search); , 'ruffle', 500, 500);
         </script>
     </body>
 </html>
