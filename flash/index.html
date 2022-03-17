@@ -7,6 +7,18 @@
         <div id='ruffle'></div>
         <script src='https://e9x.github.io/ruffle-example/ruffle.js'></script>
         <script>
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            
+            function swfcheck() {
+                if (console.log(urlParams.has('swf'))) {
+            const swfsearch = urlParams.get('swf')
+            console.log(swfsearch);
+} else {
+ alert("swf file not specified");
+}
+            
 var swfobject = {};
 
 swfobject.embedSWF = function(url, cont, width, height){
