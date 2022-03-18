@@ -1,36 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset='utf8'>
-    </head>
-    <body>
-        <div id='ruffle'></div>
-        <script src='https://e9x.github.io/ruffle-example/ruffle.js'></script>
-        <script>
-            const queryString = window.location.search;
-            console.log(queryString);
-            const urlParams = new URLSearchParams(queryString);
-            
-            function swfcheck() {
-                if (console.log(urlParams.has('swf'))) {
-} else {
- alert("swf file not specified");
-}
-            
-var swfobject = {};
 
-swfobject.embedSWF = function(url, cont, width, height){
-    var ruffle = window.RufflePlayer.newest(),
-        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
-            width: width,
-            height: height,
-            style: 'width: ' + width + 'px; height: ' + height + 'px',
-        });
+<!DOCTYPE html>
+
+
+<head>
+	 <title>
+   Chili Bowl Games Secret Ruffle Stash 
+  </title>
+
+</head>
+
+  <body>
     
-    player.load({ url: url});
-}
-swfobject.embedSWF(const search = urlParams.get('swf')
-console.log(search); , 'ruffle', 500, 500);
-        </script>
-    </body>
+    <style> body {background-color: #000000 }</style>
+
+ <!-- Div content -->
+<div style="margin:0 auto;text-align:center">
+      <embed src="weebly_apple_shooter.swf" width="850" height="600"> </embed>
+      <!-- Div align in the middle -->
+      <div style="margin-left:auto;margin-right:auto;text-align:center">
+         
+      </div>
+
+</div>
+   <script src="ruffle.js"></script>
+
+</body>
 </html>
