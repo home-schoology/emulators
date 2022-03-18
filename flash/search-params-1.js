@@ -10,7 +10,7 @@ console.log(product);
 // shirt
   
 } else {
-alert("error-file not detected");
+alert("error - file not detected");
 }
 
 
