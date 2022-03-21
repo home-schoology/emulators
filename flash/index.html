@@ -13,16 +13,25 @@
     
     <style> body {background-color: #000000 }</style>
 	  
-	  <!-- Div content -->
-<div style="margin:0 auto;text-align:center">
-        <embed src="supermario63.swf" width="850" height="600"> </embed>
-      <!-- Div align in the middle -->
-      <div style="margin-left:auto;margin-right:auto;text-align:center">
-         
-      </div>
-
-	  </div>
-
+    <div style="width:90vh;height:90vh;max-width:100%;display:block;
+    margin:0 auto;">
+        <div id="game"></div>
+    </div>
+    <script type="text/javascript">
+        var urlParams;
+        (window.onpopstate = function () {
+            var match,
+                pl     = /\+/g,
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+                query  = window.location.search.substring(1);
+            urlParams = {};
+            while (match = search.exec(query))
+            urlParams[decode(match[1])] = decode(match[2]);
+        })();
+        
+document.getElementById("game").innerHTML = urlparams["gamefile"];
+    </script>
    <script src="ruffle.js"></script>
 
 </body>
