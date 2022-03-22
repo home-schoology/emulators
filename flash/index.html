@@ -1,38 +1,33 @@
-
 <!DOCTYPE html>
 
+<!-- Div align in the middle -->
+<div style="margin-left:auto;margin-right:auto;text-align:center">
+	
 
 <head>
-	 <title>
-   Flash Gam3s
-  </title>
+<title>
+Schoology 
+</title>
 <script async src="https://arc.io/widget.min.js#nnUFwP4e"></script>
+	
 </head>
+<body>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let gamefile = params.get("gamefile");
+	document.getElementById("gamebox").src = gamefile;
+</script>
+  
+<style> body {background-color: #FFFFFF }</style>
+<embed id="gamebox" src="swf/default.swf" width="700" height="600"> </embed>
 
-  <body>
-    
-    <style> body {background-color: #000000 }</style>
-	  
-    <div style="width:90vh;height:90vh;max-width:100%;display:block;
-    margin:0 auto;">
-        <div id="game"></div>
-    </div>
-    <script type="text/javascript">
-        var urlParams;
-        (window.onpopstate = function () {
-            var match,
-                pl     = /\+/g,
-                search = /([^&=]+)=?([^&]*)/g,
-                decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-                query  = window.location.search.substring(1);
-            urlParams = {};
-            while (match = search.exec(query))
-            urlParams[decode(match[1])] = decode(match[2]);
-        })();
-        
-document.getElementById("game").innerHTML = urlparams["gamefile"];
-    </script>
-   <script src="ruffle.js"></script>
+<script src="ruffle/ruffle.js"></script>
+	
+<footer>
+<p> <a href="/">Back to flash game selection</a> </p>
+</footer>
+	
+</div>	  
 
 </body>
 </html>
