@@ -5,7 +5,7 @@
 	
 
 <head>
-<title id="title">Schoology </title>
+<title id="title">Schoology</title>
 <link id="favicon" rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <script async src="https://arc.io/widget.min.js#nnUFwP4e"></script>
 </head>
@@ -16,17 +16,18 @@
 <script>
 const siteSettings = {
 tabName:"Schoology",
-tabImage:"https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico"
-}
+tabImage:"https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico",
+setup: function() { document.getElementByID("title").innerHTML = return this.tabName; document.getElementByID("favicon").href = return this.tabImage;}};
+siteSettings.setup();
 
 const ruffleSettings = {
 pathtoRuffle:"https://home-schoology.github.io/flash/",
 ruffleName: "ruffle.js",
-ruffleURL: function () {return this.pathtoRuffle + this.ruffleName;}};
+ruffleURL: function() { return this.pathtoRuffle + this.ruffleName;}};
 	
 let params = new URLSearchParams(document.location.search);
 let gamefile = params.get("gamefile");
-document.getElementById("gamebox").innerHTML = ''+"<"+'embed id="gbEmbed" src="'+ gamefile +'" width="700" height="600"'+"></"+'embed'+"><"+'script src="'+ ruffleSettings.ruffleURL +'"'+"></"+'script'+">"+''
+document.getElementById("gamebox").innerHTML = ''+"<"+'embed id="gbEmbed" src="'+ gamefile +'" width="700" height="600"'+"></"+'embed'+"><"+'script src="'+ ruffleSettings.ruffleURL() +'"'+"></"+'script'+">"+''
 </script>
 
 <div id="gamebox"></div>
