@@ -8,3 +8,8 @@ https://github.com/ethanaobrien/emulatorjs
 Abdess for bios 
 
 https://github.com/Abdess/retroarch_system
+
+Ruffle
+
+https://github.com/ruffle-rs/ruffle
+
