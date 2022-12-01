@@ -1,0 +1,14 @@
+<div id='game' style='margin:width:100%;height:100%;'></div>
+<script type='text/javascript'>
+  let params = new URLSearchParams(document.location.search);  
+  let coreParam = params.get("core");
+  let romParam = params.get("rom");
+  let biosParam = params.get("bios");
+    EJS_player = '#game';
+    EJS_core = coreParam;
+    EJS_biosUrl = biosParam;
+    EJS_gameUrl = romParam;
+    EJS_pathtodata = 'https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS/data/';
+</script>
+<script src='https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS/data/loader.js'></script>
+  
